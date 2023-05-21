@@ -12,7 +12,7 @@ import {
 export class SignupDto {
   @ApiProperty({
     description: 'Name of user',
-    example: 'Jhon',
+    example: 'John',
   })
   @IsNotEmpty()
   @IsString()
@@ -28,7 +28,7 @@ export class SignupDto {
 
   @ApiProperty({
     description: 'Email',
-    example: 'JhonDoe@example.com',
+    example: 'JohnDoe@example.com',
   })
   @IsEmail()
   email: string;
@@ -56,7 +56,7 @@ export class SignupDto {
 export class signinDto {
   @ApiProperty({
     description: 'Email',
-    example: 'JhonDoe@example.com',
+    example: 'JohnDoe@example.com',
   })
   @IsEmail()
   email: string;
@@ -72,7 +72,7 @@ export class signinDto {
 export class generateProductKeyDto {
   @ApiProperty({
     description: 'Email',
-    example: 'JhonDoe@example.com',
+    example: 'JohnDoe@example.com',
   })
   @IsEmail()
   email: string;

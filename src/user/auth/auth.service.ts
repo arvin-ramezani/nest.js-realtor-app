@@ -109,7 +109,6 @@ export class AuthService {
   }
 
   async validateJWTToken(token: string) {
-    console.log(process.env.JWT_SECRET_KEY, token, '___');
     try {
       const jwtPayload = JWT.verify(token, process.env.JWT_SECRET_KEY);
       return jwtPayload;

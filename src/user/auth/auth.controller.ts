@@ -36,7 +36,6 @@ export class AuthController {
 
   @ApiOperation({
     summary:
-      // "Sign up as BUYER or get a product key from '/api/auth/key' and signup as REALTOR to create a home and so on.",
       'Signup as BUYER or REALTOR.',
     description: `For signing up as REALTOR productkey property is required which you should get it from '/auth/key' first.
      or singup as BUYER to inquire homes with sending message to 'api/home/{id}/inquire .' `,

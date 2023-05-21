@@ -154,7 +154,7 @@ export class HomeController {
     @Body() body: UpdateHomeResponseDto,
     @User() user: UserTokenInfo
   ): Promise<UpdateHomeResponseDto> {
-    return this.homeService.updateHome(id, body);
+    return this.homeService.updateHome(id, body, user.id);
   }
 
   @ApiOperation({

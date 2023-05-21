@@ -64,9 +64,9 @@ export class HomeService {
       where: filter,
     });
 
-    if (!homes.length) {
-      throw new NotFoundException('No homes are found');
-    }
+    // if (!homes.length) {
+    //   throw new NotFoundException('No homes are found');
+    // }
 
     return homes.map((home) => {
       // Just Send One Single Image
@@ -133,7 +133,8 @@ export class HomeService {
       price,
       landSize,
       propertyType,
-    }: UpdateHomeParam
+    }: UpdateHomeParam,
+    userId: number
   ): Promise<UpdateHomeResponseDto> {
     const home = await this.prismaService.home.findUnique({
       where: {
@@ -156,7 +157,7 @@ export class HomeService {
         land_size: landSize,
         price,
         propertyType,
-        realtor_id: 3,
+        realtor_id: userId,
       },
     });
 
