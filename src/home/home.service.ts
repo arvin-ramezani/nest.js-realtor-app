@@ -64,10 +64,6 @@ export class HomeService {
       where: filter,
     });
 
-    // if (!homes.length) {
-    //   throw new NotFoundException('No homes are found');
-    // }
-
     return homes.map((home) => {
       // Just Send One Single Image
       const fetchHome = { ...home, image: home?.images[0]?.url };
